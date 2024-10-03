@@ -1,0 +1,109 @@
+/* VARIABLES */
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light_red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off_white: hsl(0, 0%, 94%);
+  --light_grey: hsl(0, 0%, 86%);
+  --smokey_grey: hsl(0, 1%, 44%);
+  --off_black: hsl(0, 0%, 8%);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE STYLES */
+body {
+  background-color: var(--off_white);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  background-color: var(--white);
+}
+.form__label {
+  color: var(--smokey_grey);
+  font-weight: 500;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype"),
+    url("./assets/fonts/Poppins-Italic.ttf") format("truetype"),
+    url("./assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype"),
+    url("./assets/fonts/Poppins-ExtraBold.ttf") format("truetype"),
+    url("./assets/fonts/Poppins-BoldItalic.ttf") format("truetype"),
+    url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+.form__label {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* MOBILE STYLES */
+/* main container */
+.main {
+  padding: 1rem;
+  width: 80%;
+  max-width: 375px;
+  border-radius: 20px;
+  border-bottom-right-radius: 50px;
+}
+
+/* date input container */
+.all_input_container,
+.input-container {
+  display: flex;
+}
+
+.all_input_container {
+  justify-content: space-between;
+}
+.form__input {
+  padding: 0.5rem;
+  /* border-color: var(--light_grey); */
+  border: 2px solid var(--light_grey);
+  border-radius: 5px;
+}
+
+.input-container {
+  flex-direction: column;
+}
+
+/* seperator container */
+.submit-button {
+  position: relative;
+  margin: 3.5rem 0;
+  border: 0.5px solid var(--light_grey);
+  width: 100%;
+}
+
+.main__seperator-img {
+  background-color: var(--purple);
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.result-container__result {
+  font-weight: 700;
+  font-size: 2rem;
+  font-style: italic;
+}
+.result {
+  font-weight: 700;
+  color: var(--purple);
+}

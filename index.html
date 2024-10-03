@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- date container -->
+      <div class="main__date-container">
+        <form action="/" method="get" class="date-container__form-container">
+          <div class="all_input_container">
+            <!-- day input -->
+            <div class="form__day-input-container input-container">
+              <label for="day" class="form__label">DAY</label>
+              <input
+                type="number"
+                id="day"
+                class="form__input"
+                name="day"
+                min="1"
+                max="31"
+                placeholder="DD"
+                aria-invalid="false"
+                aria-describedby="day-error"
+                required
+              />
+              <span
+                id="day-error"
+                class="error-message"
+                aria-live="assertive"
+              ></span>
+            </div>
+
+            <!-- month input -->
+            <div class="form__month-input-container input-container">
+              <label for="month" class="form__label">MONTH</label>
+              <input
+                type="number"
+                id="month"
+                class="form__input"
+                name="month"
+                min="1"
+                max="12"
+                placeholder="MM"
+                aria-invalid="false"
+                aria-describedby="month-error"
+                required
+              />
+              <span
+                id="month-error"
+                class="error-message"
+                aria-live="assertive"
+              ></span>
+            </div>
+
+            <!-- year input -->
+            <div class="form__year-input-container input-container">
+              <label for="day" class="form__label">YEAR</label>
+              <input
+                type="number"
+                id="year"
+                class="form__input"
+                name="year"
+                min="1930"
+                max="2024"
+                placeholder="YYYY"
+                aria-invalid="false"
+                aria-describedby="year-error"
+                required
+              />
+              <span
+                id="year-error"
+                class="error-message"
+                aria-live="assertive"
+              ></span>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-button">
+            <img
+              src="./assets/images/icon-arrow.svg"
+              alt="downward arrow icon"
+              class="main__seperator-img"
+            />
+          </button>
+        </form>
+      </div>
+
+      <!-- result container -->
+      <div class="main__result-container">
+        <p class="result-container__result">
+          <span class="result years">---</span> years
+        </p>
+        <p class="result-container__result">
+          <span class="result months">---</span> months
+        </p>
+        <p class="result-container__result">
+          <span class="result days">---</span> days
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
